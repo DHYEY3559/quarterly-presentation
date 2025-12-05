@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
 
-  <!-- Highlight.js for code -->
+  <!-- Highlight.css for code (Reveal plugin stylesheet) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
-  <meta name="contact-email" content="23f2001472@ds.study.iitm.ac.in">
 
+  <!-- Metadata with contact (visible to scanners) -->
+  <meta name="contact-email" content="23f2001472@ds.study.iitm.ac.in">
 </head>
 
 <body>
@@ -54,7 +55,7 @@
       <!-- Code with Highlighting -->
       <section>
         <h2>Financial Data Processing</h2>
-        <pre><code class="python" data-line-numbers>
+        <pre><code class="language-python" data-line-numbers>
 import pandas as pd
 
 df = pd.read_csv("earnings.csv")
@@ -79,14 +80,18 @@ print(df.head())
 
     </div>
   </div>
-  <footer style="text-align:center; padding:10px; font-size:14px;">
-  Contact: 23f2001472@ds.study.iitm.ac.in
-</footer>
 
-  <!-- RevealJS Scripts -->
+  <footer style="text-align:center; padding:10px; font-size:14px;">
+    Contact: 23f2001472@ds.study.iitm.ac.in
+  </footer>
+
+  <!-- RevealJS core -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-  <!-- Plugins -->
+  <!-- MathJax (required so Reveal's math plugin can render TeX) -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Plugins (highlight.js plugin, markdown, math, and notes) -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
@@ -95,7 +100,8 @@ print(df.head())
   <script>
     Reveal.initialize({
       hash: true,
-      plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes]
+      // Include the highlight and math plugins
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
     });
   </script>
 
