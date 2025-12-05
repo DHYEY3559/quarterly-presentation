@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Presentation</title>
+
+  <!-- RevealJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
+
+  <!-- Highlight.js for code -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p>Technical Consultant – Financial Division</p>
+        <p>Email: <b>23f2001472@ds.study.iitm.ac.in</b></p>
+        <aside class="notes">Introduce yourself and summarize the quarter.</aside>
+      </section>
+
+      <!-- Markdown Slide -->
+      <section data-markdown>
+        <textarea data-template>
+## Executive Summary (Markdown)
+
+- YoY Growth: **12.4%**
+- Operating Margin: **+2.1%**
+- Net Profit: **₹142 Cr**
+- Guidance updated for Q4
+
+*This slide is written in Markdown.*
+        </textarea>
+      </section>
+
+      <!-- Animated Fragments -->
+      <section>
+        <h2>Key Financial Drivers</h2>
+        <ul>
+          <li class="fragment">Loan portfolio expansion</li>
+          <li class="fragment">Cost optimization</li>
+          <li class="fragment fade-up">Digital transformation</li>
+        </ul>
+        <aside class="notes">Discuss points one by one as they appear.</aside>
+      </section>
+
+      <!-- Code with Highlighting -->
+      <section>
+        <h2>Financial Data Processing</h2>
+        <pre><code class="python" data-line-numbers>
+import pandas as pd
+
+df = pd.read_csv("earnings.csv")
+df["growth"] = (df["q4"] - df["q3"]) / df["q3"]
+print(df.head())
+        </code></pre>
+        <aside class="notes">Explain how growth percentage is calculated.</aside>
+      </section>
+
+      <!-- Mathematical Equations -->
+      <section>
+        <h2>Financial Formulas</h2>
+        \[
+        ROI = \frac{Net\ Profit}{Total\ Investment} \times 100
+        \]
+        <br>
+        \[
+        NPV = \sum_{t=1}^{n} \frac{CF_t}{(1+r)^t}
+        \]
+        <aside class="notes">Explain ROI and NPV to stakeholders.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- RevealJS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes]
+    });
+  </script>
+
+</body>
+</html>
